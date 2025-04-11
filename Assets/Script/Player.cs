@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     public GameObject refreshBTN, victoryIMG;
 
     private Rigidbody2D rb;
-    // playerInput é uma variavel utilizada para o metodo MovimentPlayer
+    // playerInput é uma variavel utilizada para o  MovimentPlayer
     //private float playerInput;
     
     void Start()
@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
         isVictored = Physics2D.OverlapCapsule(checkeGround.position, new Vector2(0.1f, 0.5f), CapsuleDirection2D.Horizontal, 0, layerVictory);
     }
 
-    //Metodo para realizar moviemtação do Player pelo teclado.
+    //Realiza movimentação do Player pelo teclado.
     /*public void MovimentPlayer()
     {
         playerInput = Input.GetAxis("Horizontal");
