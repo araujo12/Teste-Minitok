@@ -12,8 +12,7 @@ public class Player : MonoBehaviour
     public GameObject refreshBTN, victoryIMG;
 
     private Rigidbody2D rb;
-    // playerInput é uma variavel utilizada para o  MovimentPlayer
-    //private float playerInput;
+    
     
     void Start()
     {
@@ -24,14 +23,13 @@ public class Player : MonoBehaviour
         victoryIMG.SetActive(false);
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
         Jump();
         CheckedGround();
         CheckedTrap();
-        CheckedVictory();
-       // MovimentPlayer();
+        CheckedVictory();     
         DeathPlayer();
         VictoryPlayer();        
     }    
@@ -52,14 +50,7 @@ public class Player : MonoBehaviour
         isVictored = Physics2D.OverlapCapsule(checkeGround.position, new Vector2(0.1f, 0.5f), CapsuleDirection2D.Horizontal, 0, layerVictory);
     }
 
-    //Realiza movimentação do Player pelo teclado.
-    /*public void MovimentPlayer()
-    {
-        playerInput = Input.GetAxis("Horizontal");
-
-        rb.velocity = new Vector2(playerInput * speedMove, rb.velocity.y);
-    }*/
-
+    
     public void MoveLeftPlayer()
     {
         rb.velocity = new Vector2(-0.7f * speedMove, rb.velocity.y);
